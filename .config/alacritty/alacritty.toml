@@ -1,0 +1,32 @@
+[general]
+import = [
+  "keybindings.toml",
+  "themes/one_dark.toml",
+]
+
+[terminal]
+shell = { program = "zellij" }
+osc52 = "CopyPaste"
+
+[window]
+decorations = "None"
+padding = { x = 2, y = 2 }
+dynamic_padding = false
+opacity = 0.8
+blur = true
+
+[scrolling]
+multiplier = 200
+
+[font]
+normal = { family = "Maple Mono NF CN"}
+size = 13.5
+
+[cursor.style]
+shape = "Beam"
+blinking = "Never"
+
+[mouse]
+hide_when_typing = true
+
+

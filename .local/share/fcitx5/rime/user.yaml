@@ -1,0 +1,10 @@
+var:
+  last_build_time: 1707810414
+  option:
+    zh_hans: true
+    zh_hant: false
+  previously_selected_schema: luna_pinyin
+  schema_access_time:
+    bopomofo: 1707810503
+    luna_pinyin: 1707810529
+    luna_pinyin_simp: 1707810497
