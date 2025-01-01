@@ -12,6 +12,7 @@ $env.PATH = (
 )
 
 $env.EDITOR = "helix"
+
 $env.TRANSIENT_PROMPT_INDICATOR = ">> "
 $env.TRANSIENT_PROMPT_COMMAND = ""
 $env.TRANSIENT_PROMPT_COMMAND_RIGHT = ""
@@ -34,7 +35,7 @@ $env.PROMPT_COMMAND = {||
   let pwd = ($env.PWD)
   let pwd = color {fg: blue, attr: bu} $pwd
   
-  ([$count, $date, $pwd] | str join $separator) + $newline
+  ([$pwd, $date, $count] | str join $separator) + $newline
 }
 
 def color [style, content] {
