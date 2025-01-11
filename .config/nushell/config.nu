@@ -12,6 +12,8 @@ alias ll = ls -l
 alias hx = helix
 alias vi = nvim
 alias co = cargo
+alias rm = rm --trash
+alias gx = /var/guix/profiles/per-user/jedsek/current-guix/bin/guix
 alias shutdown = systemctl poweroff
 alias reboot = systemctl reboot
 alias goto-config = cd ~/.config/nushell/
@@ -22,7 +24,17 @@ def fetch [] {
   clear -k
   fastfetch
 }
+def --env load-bash-env [s: string] {
+  mut s = ($s | str trim | lines | parse 'export {name}="{value}"' | transpose --header-row --as-record)
 
+  if ("PWD" in ($s | columns)) {
+    cd ($s | get "PWD")
+    $s = ($s | reject "PWD")  
+  }
+
+  load-env $s
+
+}
 
 $env.COMMAND_COUNT = 0
 

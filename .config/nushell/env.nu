@@ -3,15 +3,19 @@ zoxide init nushell | save -f ~/.config/nushell/zoxide.nu
 $env.RUSTUP_DIST_SERVER = "https://rsproxy.cn"
 $env.RUSTUP_UPDATE_ROOT = "https://rsproxy.cn/rustup"
 
+$env.GUIX_PROFILE = "/var/guix/profiles/per-user/jedsek/current-guix"
+
 $env.PATH = (
   $env.PATH
   | split row (char esep)
-  | append [/usr/local/bin ~/.local/bin ~/.local/share/bin]
   | append ~/.cargo/bin
+  | append $"($env.GUIX_PROFILE)/bin"
+  | append [/usr/local/bin ~/.local/bin ~/.local/share/bin]
   | uniq # filter so the paths are unique
 )
 
 $env.EDITOR = "helix"
+
 
 $env.TRANSIENT_PROMPT_INDICATOR = ">> "
 $env.TRANSIENT_PROMPT_COMMAND = ""
