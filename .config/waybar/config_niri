@@ -72,6 +72,7 @@
 
     "network": {
         "interval": 1,
+        "min-length": 22,
         "interface": "wlan0", // (Optional) To force the use of this interface
         "format-wifi": "{essid}({bandwidthTotalBits}) ",
         "format-ethernet": "{ipaddr}/{cidr} ",
