@@ -10,6 +10,10 @@ hotkey-overlay {
 // Add lines like this to spawn processes at startup.
 // Note that running niri as a session supports xdg-desktop-autostart,
 // which may be more convenient to use.
+spawn-at-startup "systemctl" "--user" "import-environment" "WAYLAND_DISPLAY" "XDG_CURRENT_DESKTOP"
+spawn-at-startup "dbus-update-activation-environment" "--systemd" "WAYLAND_DISPLAY" "XDG_CURRENT_DESKTOP"
+spawn-at-startup "dbus-update-activation-environment" "--systemd" "--all"
+
 spawn-at-startup "swww-daemon"
 spawn-at-startup "swayosd-server"
 spawn-at-startup "xwayland-satellite"
@@ -274,6 +278,7 @@ binds {
     Mod+Return { spawn "alacritty"; }
     Mod+D { spawn "wofi"; }
     Mod+B { spawn "zen"; }
+    Mod+E { spawn "nautilus"; }
     Mod+Escape { spawn "swaylock"; }
 
     Mod+Slash { spawn "killall" "-SIGUSR1" "waybar"; }
