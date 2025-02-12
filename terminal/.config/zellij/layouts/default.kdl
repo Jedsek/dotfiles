@@ -1,0 +1,38 @@
+layout {
+   /-floating_panes borderless=true {
+     pane x="40%" y="10%" width="20%" height=4 borderless=true {
+      plugin location="file:/home/jedsek/proj/fcitx5-zellij/target/wasm32-wasip1/release/fcitx5-zellij.wasm"
+     }
+   }
+
+    pane size=2 borderless=true {
+        plugin location="file:~/.config/zellij/plugins/zjstatus.wasm" {
+            format_left  "#[fg=#89B4FA,bold]{tabs} {mode}"
+            format_right "{command_git_branch} {datetime}"
+            format_space ""
+
+            border_enabled  "true"
+            border_char     "─"
+            border_format   "#[fg=blue]{char}"
+            border_position "bottom"
+
+            hide_frame_for_single_pane "false"
+
+            mode_normal  "#[fg=blue,bold]{name}"
+            mode_tmux    "#[bg=#ffc387] "
+
+            tab_normal   "#[fg=#6C7086] {index} "
+            tab_active   "#[fg=#9399B2,bold,italic] {index} "
+
+            command_git_branch_command     "git rev-parse --abbrev-ref HEAD"
+            command_git_branch_format      "#[fg=blue] {stdout} "
+            command_git_branch_interval    "10"
+            command_git_branch_rendermode  "static"
+
+            datetime        "#[fg=#6C7086,bold] {format} "
+            datetime_format "%A, %Y-%m-%d, %H:%M:%S"
+            datetime_timezone "Asia/Shanghai"
+        }
+    }
+	pane
+}

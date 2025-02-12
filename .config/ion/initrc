@@ -1,6 +1,0 @@
-let dir = "~/.config/ion"
-
-source $dir/env
-source $dir/prompt
-source $dir/alias
-

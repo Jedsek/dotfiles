@@ -1,8 +1,0 @@
-sk -h
-plugin -h
-plugin rm sk
-plugin rm skim
-c
-sk
-sk -h
-c

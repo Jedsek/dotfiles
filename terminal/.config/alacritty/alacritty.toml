@@ -1,0 +1,35 @@
+[general]
+import = [
+  "keybindings.toml",
+  "themes/one_dark.toml",
+]
+
+[terminal]
+shell = { program = "zellij" }
+osc52 = "CopyPaste"
+
+[window]
+decorations = "None"
+padding = { x = 0, y = 0 }
+dynamic_padding = true
+opacity = 0.92
+blur = true
+
+[scrolling]
+multiplier = 200
+
+[font]
+normal = { family = "Maple Mono NF CN", style = "Regular" }
+bold = { family = "Maple Mono NF CN", style = "Bold" }
+italic = { family = "Maple Mono NF CN", style = "Italic" }
+bold_italic = { family = "Maple Mono NF CN", style = "Bold Italic" }
+size = 11
+
+[cursor.style]
+shape = "Beam"
+blinking = "Never"
+
+[mouse]
+hide_when_typing = true
+
+

@@ -1,8 +1,0 @@
-# Rime user dictionary
-#@/db_name	luna_pinyin
-#@/db_type	userdb
-#@/rime_version	1.9.0
-#@/tick	3
-#@/user_id	d77c55cb-511f-4476-8745-527241d3be9c
-a si dun 	阿斯頓	c=2 d=1.98506 t=3
-pa 	怕	c=1 d=1 t=3

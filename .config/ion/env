@@ -1,3 +1,0 @@
-export XDG_CONFIG_HOME = "~/.config"
-export HISTFILE = "~/.config/ion/histora"
-export HISTORY_FILE = "~/.config/ion/histora"
