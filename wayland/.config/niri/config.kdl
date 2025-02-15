@@ -60,8 +60,8 @@ switch-events {
 
 input {
     keyboard {
-        xkb {
-        }
+        repeat-delay 500
+        repeat-rate 25
     }
 
     // Next sections include libinput settings.
@@ -71,13 +71,13 @@ input {
         // dwt
         // dwtp
         natural-scroll
-        accel-speed 0.0
+        accel-speed 0.4
         accel-profile "adaptive"
     }
 
     mouse {
         natural-scroll
-        accel-speed 0.0
+        accel-speed 0.4
         accel-profile "adaptive"
     }
 
