@@ -30,9 +30,12 @@ cursorcolumn = false
 auto-save = false
 auto-pairs = false
 auto-format = true
-# end-of-line-diagnostics = "hint"
-# [editor.inline-diagnostics]
-# cursor-line = "warning"
+end-of-line-diagnostics = "hint"
+
+[editor.inline-diagnostics]
+prefix-len = 50
+cursor-line = "error"
+other-lines = "error"
 
 [editor.lsp]
 display-messages = true
@@ -55,6 +58,9 @@ left = ["mode", "spacer", "separator", "file-type", "read-only-indicator", "spin
 center = ["file-modification-indicator", "spacer", "diagnostics", "file-name",  "spacer", "version-control"]
 right = ["position", "separator", "spacer", "position-percentage", "spacer", "separator", "total-line-numbers"]
 
+[editor.file-picker]
+hidden = false
+
 [editor.gutters.line-numbers]
 min-width = 0
 
@@ -69,7 +75,7 @@ newline = "none"
 
 [editor.whitespace.characters]
 space = "·"
-nbsp = "⍽"
+nbsp = " "
 tab = "→"
 newline = "⏎"
 tabpad = "·" # Tabs will look like "→···" (depending on tab width)

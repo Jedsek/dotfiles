@@ -29,7 +29,7 @@ spawn-at-startup "xwayland-satellite"
 spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
 spawn-at-startup "fcitx5" "-d" "-r"
 spawn-at-startup "devmon"
-spawn-at-startup "nu" "~/.config/niri/scripts/wallpaper.nu" "scheduled"
+spawn-at-startup "nu" "~/.config/niri/scripts/wallpaper.nu" "scheduled_next"
 spawn-at-startup "nu" "~/.config/niri/scripts/sound.nu" "--kind" "startup"
 
 spawn-at-startup "flatpak" "run" "app.zen_browser.zen"

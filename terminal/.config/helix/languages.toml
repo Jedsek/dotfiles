@@ -8,6 +8,12 @@ auto-format = true
 # cargo.allFeatures = true
 # workspace = false
 
+# [language-server.rust-analyzer.config]
+# check.checkOnSave = false
+# command = "clippy"
+# cargo.allFeatures = true
+# workspace = false
+
 
 [[language]]
 name = "scheme"

@@ -9,17 +9,35 @@
 # nu wallpaper.nu 1
 # nu wallpaper.nu 2
 
+
 def main [arg: string] {
   let wallpapers_dir = $env.FILE_PWD | path join "../assets/wallpapers"
   let len = (ls $wallpapers_dir | length)
   mut next_num = random int 0..<$len
+  let timeout: duration = 1min
   
   match $arg {
-    "scheduled" => {
+    "scheduled_random" => {
       loop {
         switch $wallpapers_dir $next_num
         let $current_num = $next_num
-        sleep 10min;
+        sleep $timeout
+        while $next_num == $current_num { $next_num = random int 0..<$len }
+      }
+    }
+    "scheduled_next" => {
+      loop {
+        switch $wallpapers_dir $next_num
+        $next_num = ($next_num + 1) mod $len
+        sleep $timeout
+      }
+    }
+    "scheduled" => {
+      let timeout: duration = 1min
+      loop {
+        switch $wallpapers_dir $next_num
+        let $current_num = $next_num
+        sleep $timeout
         while $next_num == $current_num { $next_num = random int 0..<$len }
       }
     }
