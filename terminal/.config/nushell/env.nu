@@ -1,4 +1,4 @@
-zoxide init nushell | save -f ~/.config/nushell/zoxide.nu
+zoxide init nushell | save -f ~/.config/nushell/scripts/zoxide.nu
 
 $env.RUSTUP_DIST_SERVER = "https://rsproxy.cn"
 $env.RUSTUP_UPDATE_ROOT = "https://rsproxy.cn/rustup"
@@ -10,7 +10,7 @@ $env.PATH = (
   | split row (char esep)
   | append ~/.cargo/bin
   | append ~/.opam/default/bin
-  | append $"($env.GUIX_PROFILE)/bin"
+  # | append $"($env.GUIX_PROFILE)/bin"
   | append [/usr/local/bin ~/.local/bin ~/.local/share/bin]
   | uniq # filter so the paths are unique
 )
@@ -21,9 +21,9 @@ $env.OCAMLTOP_INCLUDE_PATH = "/home/jedsek/.opam/default/lib/toplevel:~/.opam/de
 $env.CAML_LD_LIBRARY_PATH = "/home/jedsek/.opam/default/lib/stublibs:/home/jedsek/.opam/default/lib/ocaml/stublibs:/home/jedsek/.opam/default/lib/ocaml"
 $env.OCAML_TOPLEVEL_PATH = "/home/jedsek/.opam/default/lib/toplevel"
 $env.MANPATH = ":~/.opam/default/man:/home/jedsek/.opam/default/man"
-$env.PATH = "/home/jedsek/.opam/default/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/sbin:/sbin:/bin:~/.cargo/bin:/var/guix/profiles/per-user/jedsek/current-guix/bin:~/.local/bin:~/.local/share/bin:~/.opam/default/bin"
+# $env.PATH = "/home/jedsek/.opam/default/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/sbin:/sbin:/bin:~/.cargo/bin:/var/guix/profiles/per-user/jedsek/current-guix/bin:~/.local/bin:~/.local/share/bin:~/.opam/default/bin"
 
-$env.EDITOR = "helix"
+$env.EDITOR = "hx"
 
 $env.TRANSIENT_PROMPT_INDICATOR = ">> "
 $env.TRANSIENT_PROMPT_COMMAND = ""

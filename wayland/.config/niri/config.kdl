@@ -26,7 +26,7 @@ spawn-at-startup "swww-daemon" "--no-cache"
 spawn-at-startup "pueued" "-d"
 spawn-at-startup "swayosd-server"
 spawn-at-startup "xwayland-satellite"
-spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
+spawn-at-startup "/usr/libexec/polkit-gnome-authentication-agent-1"
 spawn-at-startup "fcitx5" "-d" "-r"
 spawn-at-startup "devmon"
 spawn-at-startup "nu" "~/.config/niri/scripts/wallpaper.nu" "scheduled_next"
@@ -272,6 +272,14 @@ window-rule {
     
     open-on-workspace "code"
     open-focused true
+}
+
+window-rule {
+    match app-id="org.gnome.Nautilus"
+    
+    open-on-workspace "code"
+    open-focused true
+    open-floating true
 }
 
 window-rule {

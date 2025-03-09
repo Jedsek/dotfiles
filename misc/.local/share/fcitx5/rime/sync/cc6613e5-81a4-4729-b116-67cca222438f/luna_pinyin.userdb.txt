@@ -1,0 +1,24 @@
+# Rime user dictionary
+#@/db_name	luna_pinyin
+#@/db_type	userdb
+#@/rime_version	1.11.2
+#@/tick	24
+#@/user_id	cc6613e5-81a4-4729-b116-67cca222438f
+dai 	代	c=2 d=1.9605 t=24
+dai ma 	代嗎	c=1 d=1 t=24
+de 	的	c=1 d=0.995012 t=24
+hao xiang 	好像	c=3 d=2.93208 t=24
+he 	鶴	c=2 d=1.9415 t=24
+jiao 	交	c=1 d=0.99005 t=24
+ke ai 	可愛	c=2 d=1.98511 t=24
+ru he 	如何	c=1 d=0.965605 t=24
+shang 	上	c=1 d=0.960789 t=24
+she me 	什麼	c=1 d=0.955997 t=24
+shi 	是	c=1 d=0.951229 t=24
+shi yong 	使用	c=1 d=0.970446 t=24
+shuang pin 	雙拼	c=1 d=0.985112 t=24
+ti 	提	c=1 d=0.985112 t=24
+wo 	我	c=2 d=1.9362 t=24
+xiao 	小	c=1 d=0.99005 t=24
+xiao he 	小鶴	c=1 d=0.980199 t=24
+yu 	與	c=1 d=0.97531 t=24
